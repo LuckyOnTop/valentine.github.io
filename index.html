@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Will You Be My Valentines?</h1>
+                <h1 class = "header_text">Uwu</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ccaa0d45-4815-4caa-bafc-e6b8973e4b1f/d8jd1ek-5d07ccc6-a47e-4ef8-aa76-ea062d79c648.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NjYWEwZDQ1LTQ4MTUtNGNhYS1iYWZjLWU2Yjg5NzNlNGIxZlwvZDhqZDFlay01ZDA3Y2NjNi1hNDdlLTRlZjgtYWE3Ni1lYTA2MmQ3OWM2NDguZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.m6fAi9UOe3TkyJNhckPcc1tmjp68ovE72ZH0Ha4HX0Q" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
